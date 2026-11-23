@@ -9,25 +9,24 @@
     <title>EVMA — Sign Up</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="js/auth.js" defer></script>
 </head>
 
 <body>
 
     <main class="login-container">
 
-        <!-- Logo -->
         <div class="logo">
             evma
         </div>
 
-        <!-- Registration form -->
         <section class="login-card">
 
             <h1>Hi! Let's volunteer</h1>
 
             <p>Create an account to find your first role.</p>
 
-            <form id="signup-form">
+            <form id="signup-form" novalidate>
 
                 <!-- Full name -->
                 <div class="form-group">
@@ -43,6 +42,8 @@
                         minlength="2"
                         required
                     >
+
+                    <small class="error-message" id="name-error"></small>
 
                 </div>
 
@@ -60,6 +61,8 @@
                         required
                     >
 
+                    <small class="error-message" id="email-error"></small>
+
                 </div>
 
                 <!-- Password -->
@@ -71,11 +74,13 @@
                         type="password"
                         id="password"
                         name="password"
-                        placeholder="At least 6 characters"
+                        placeholder="At least 8 characters"
                         autocomplete="new-password"
-                        minlength="6"
+                        minlength="8"
                         required
                     >
+
+                    <small class="error-message" id="password-error"></small>
 
                 </div>
 
@@ -90,9 +95,10 @@
                         name="confirm_password"
                         placeholder="Repeat your password"
                         autocomplete="new-password"
-                        minlength="6"
                         required
                     >
+
+                    <small class="error-message" id="confirm-password-error"></small>
 
                 </div>
 

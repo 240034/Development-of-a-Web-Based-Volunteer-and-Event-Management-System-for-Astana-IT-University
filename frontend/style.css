@@ -232,3 +232,29 @@ button:active {
         font-size: 22px;
     }
 }
+
+
+/* FORM VALIDATION */
+
+.error-message {
+  display: block;
+  color: #d64545;
+  font-size: 12px;
+  margin-top: 5px;
+  min-height: 0;
+}
+
+.error-message:empty {
+  display: none;
+}
+
+.form-group input.input-error {
+  border: 1px solid #d64545;
+  background-color: #fffafa;
+}
+
+.form-group input.input-error:focus {
+  outline: none;
+  border-color: #d64545;
+  box-shadow: 0 0 0 3px rgba(214, 69, 69, 0.1);
+}
