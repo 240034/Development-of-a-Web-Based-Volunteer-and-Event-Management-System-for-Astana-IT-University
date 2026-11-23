@@ -1,0 +1,234 @@
+
+/* =================================
+   EVMA — GLOBAL STYLES
+================================= */
+
+/* 1. Color palette */
+
+:root {
+    --bg: #f3ebfa;
+    --card: #ffffff;
+
+    --primary: #5b1a8c;
+    --primary-hover: #471270;
+    --secondary: #eadcf5;
+
+    --text: #24152e;
+    --muted: #81748a;
+
+    --border: #e5dbea;
+
+    --success: #329b70;
+    --error: #d64545;
+
+    --shadow: 0 8px 30px rgba(91, 26, 140, 0.10);
+}
+
+
+/* 2. Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 3. Main page */
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+
+/* 4. Login layout */
+
+.login-container {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+}
+
+
+/* 5. Logo */
+
+.logo {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+
+    color: var(--primary);
+
+    margin-bottom: 24px;
+}
+
+
+/* 6. Login card */
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+
+    background-color: var(--card);
+
+    padding: 36px;
+
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* 7. Headings */
+
+.login-card h1 {
+    font-size: 25px;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.login-card > p {
+    font-size: 14px;
+    color: var(--muted);
+
+    margin-bottom: 28px;
+}
+
+
+/* 8. Form */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 46px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--border);
+    border-radius: 9px;
+
+    background-color: #ffffff;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    color: var(--text);
+
+    outline: none;
+
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #b0a5b8;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 3px rgba(91, 26, 140, 0.10);
+}
+
+
+/* 9. Button */
+
+button {
+    width: 100%;
+    height: 46px;
+
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 9px;
+
+    background-color: var(--primary);
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+/* 10. Sign up link */
+
+.signup-link {
+    text-align: center;
+
+    font-size: 13px;
+    color: var(--muted);
+
+    margin-top: 24px;
+    margin-bottom: 0 !important;
+}
+
+.signup-link a {
+    color: var(--primary);
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* 11. Responsive design */
+
+@media (max-width: 480px) {
+
+    .login-container {
+        padding: 24px 16px;
+    }
+
+    .login-card {
+        padding: 28px 22px;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+
+    .login-card h1 {
+        font-size: 22px;
+    }
+}
